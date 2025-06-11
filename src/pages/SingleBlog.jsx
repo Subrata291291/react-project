@@ -27,7 +27,7 @@ const SingleBlog = () => {
         setPost(selectedPost);
         setActiveCategory(''); // No category is active initially
 
-        const recent = all.filter(p => p.id !== parseInt(id)).slice(0, 3);
+        const recent = all.filter(p => p.id !== parseInt(id)).slice(0, 4);
         setRecentPosts(recent);
       });
   }, [id]);

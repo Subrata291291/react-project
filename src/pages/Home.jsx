@@ -5,6 +5,7 @@ import FeaturingArea from '../components/FeaturingArea';
 import NewArrivals from '../components/NewArrivals';
 import BeatSection from '../components/BeatSection';
 import SpecialOffers from '../components/SpecialOffers';
+import IntroducingVideo from '../components/IntroducingVideo';
 export default function Home() {
 
   const bannerSliderSettings = {
@@ -133,6 +134,7 @@ export default function Home() {
       <NewArrivals/>
       <BeatSection/>
       <SpecialOffers/>
+      <IntroducingVideo/>
       
 
 
