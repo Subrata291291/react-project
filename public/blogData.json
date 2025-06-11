@@ -1,0 +1,77 @@
+{
+  "categories": [
+    {
+      "name": "Technology",
+      "posts": [
+        {
+          "id": 1,
+          "title": "How Noise-Canceling Headphones Work",
+          "description": "Discover the tech behind active noise cancellation and how it transforms your listening experience.",
+          "img": "../src/assets/images/blog-5.jpg"
+        },
+        {
+          "id": 2,
+          "title": "Bluetooth 5.3 vs 5.2: What’s New?",
+          "description": "Learn about the latest Bluetooth advancements and what they mean for your wireless headphones.",
+          "img": "../src/assets/images/blog-6.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Health",
+      "posts": [
+        {
+          "id": 3,
+          "title": "Is It Safe to Wear Headphones All Day?",
+          "description": "Explore the health effects of prolonged headphone use and how to protect your hearing.",
+          "img": "../src/assets/images/blog-7.jpg"
+        },
+        {
+          "id": 4,
+          "title": "Best Volume Levels for Long Listening Sessions",
+          "description": "Avoid ear fatigue and damage by learning about safe audio levels for daily headphone use.",
+          "img": "../src/assets/images/blog-5.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Travel",
+      "posts": [
+        {
+          "id": 5,
+          "title": "Top Headphones for Travelers in 2025",
+          "description": "A guide to the most comfortable, compact, and noise-isolating headphones for your next adventure.",
+          "img": "../src/assets/images/blog-6.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Finance",
+      "posts": [
+        {
+          "id": 6,
+          "title": "Are Premium Headphones Worth the Price?",
+          "description": "Weigh the features and performance of high-end headphones before making your investment.",
+          "img": "../src/assets/images/blog-7.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Lifestyle",
+      "posts": [
+        {
+          "id": 7,
+          "title": "Matching Your Headphones with Your Style",
+          "description": "Learn how headphones are becoming part of your fashion and lifestyle statement.",
+          "img": "../src/assets/images/blog-5.jpg"
+        },
+        {
+          "id": 8,
+          "title": "Best Headphones for Gym and Daily Workouts",
+          "description": "Find sweatproof, stable-fit headphones that match your active lifestyle.",
+          "img": "../src/assets/images/blog-6.jpg"
+        }
+      ]
+    }
+  ]
+}
