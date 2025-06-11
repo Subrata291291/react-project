@@ -41,7 +41,7 @@ const SpecialOffers = () => {
         <div className="row">
           {/* LEFT SECTION */}
           <div className="col-lg-4 col-md-5 col-12">
-            <div className="offer_left">
+            <div className="offer_left" data-aos="fade-right">
               <h4>Boat Headphones</h4>
               {leftOffers.map((item) => (
                 <div className="offer_box" key={item.id}>
@@ -68,7 +68,7 @@ const SpecialOffers = () => {
 
           {/* RIGHT SECTION - SLIDER */}
           <div className="col-lg-8 col-md-7 col-12">
-            <div className="offer_right">
+            <div className="offer_right" data-aos="fade-left">
               <div className="offer_slider p-0 container">
                 <Slider {...sliderSettings}>
                   {rightOffers.map((item) => (

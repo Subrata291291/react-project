@@ -8,7 +8,7 @@ export default function BeatSection() {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-6 col-12 order-lg-1 order-md-1 order-2">
-            <div className="beat_left">
+            <div className="beat_left" data-aos="fade-right">
               <h3 className="title">Lightweight Headphones</h3>
               <p>
                 Diam donec adipiscing tristique risus. Praesent tristique magna sit amet
@@ -21,7 +21,7 @@ export default function BeatSection() {
             </div>
           </div>
           <div className="col-lg-6 col-md-6 col-12 order-lg-2 order-md-2 order-1">
-            <div className="beat_right">
+            <div className="beat_right" data-aos="fade-left">
               <img src={beatpic} alt="beat-pic" />
             </div>
           </div>
@@ -31,12 +31,12 @@ export default function BeatSection() {
       <div className="container-fluid">
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-6 col-12 p-0">
-            <div className="beat1_left">
+            <div className="beat1_left" data-aos="fade-right">
               <img src={beatGirl} alt="beat1-pic" />
             </div>
           </div>
           <div className="col-lg-6 col-md-6 col-12">
-            <div className="beat1_right">
+            <div className="beat1_right" data-aos="fade-left">
               <h3 className="title">Listen the sound of quality</h3>
               <p>
                 Diam donec adipiscing tristique risus. Praesent tristique magna sit amet

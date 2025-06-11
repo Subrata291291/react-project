@@ -8,6 +8,7 @@ import SpecialOffers from '../components/SpecialOffers';
 import IntroducingVideo from '../components/IntroducingVideo';
 export default function Home() {
 
+
   const bannerSliderSettings = {
     dots: true,
     infinite: true,
@@ -45,7 +46,7 @@ export default function Home() {
       <Slider {...bannerSliderSettings} className="banner_slider">
         <div className="slider position-relative slider-1">
           <div className="container">
-            <div className="banner_box">
+            <div className="banner_box" data-aos="fade-right">
               <h3>feel the music in your bones</h3>
               <h4>Music loud <br />Fulfill your music needs</h4>
               <button className="button btn order-btn">Order Now</button>
@@ -55,7 +56,7 @@ export default function Home() {
 
         <div className="slider position-relative slider-2">
           <div className="container">
-            <div className="banner_box">
+            <div className="banner_box" data-aos="fade-right">
               <h3>Exhale worries with headphones</h3>
               <h4>Deserve best <br />Interpret your music differently</h4>
               <button className="button btn order-btn">Order Now</button>
@@ -65,7 +66,7 @@ export default function Home() {
 
         <div className="slider position-relative slider-3">
           <div className="container">
-            <div className="banner_box">
+            <div className="banner_box" data-aos="fade-left">
               <h3>stylish wireless on ear-headphones</h3>
               <h4>Fine quality <br />Wireless headphones to stay inspired</h4>
               <button className="button btn order-btn">Order Now</button>
@@ -79,12 +80,12 @@ export default function Home() {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-6 col-lg-6 col-md-6 col-12">
-              <div className="box_left">
+              <div className="box_left" data-aos="fade-right">
                 <img src={boxPic} alt="headset" />
               </div>
             </div>
             <div className="col-6 col-lg-6 col-md-6 col-12">
-              <div className="box_right">
+              <div className="box_right" data-aos="fade-left">
                 <h3 className="title">What’s in the Box</h3>
                 <p className="description">Marques ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra.</p>
                 <ul>
@@ -136,8 +137,6 @@ export default function Home() {
       <SpecialOffers/>
       <IntroducingVideo/>
       
-
-
     </div>
   )
 }

@@ -14,7 +14,7 @@ const FeaturingArea = () => {
         </div>
         <div className="row">
           <div className="col-lg-4 col-md-4 col-12">
-            <div className="feature_left">
+            <div className="feature_left" data-aos="fade-right">
               <img src={keepImage} alt="keep" />
               <h3>Keep feeling music</h3>
               <p>
@@ -24,7 +24,7 @@ const FeaturingArea = () => {
             </div>
           </div>
           <div className="col-lg-8 col-md-8 col-12">
-            <div className="feature_right">
+            <div className="feature_right" data-aos="fade-left">
               <img src={homeImage3} alt="home-image-3" className="home-image-3" />
               <h3>
                 <span>

@@ -51,7 +51,7 @@ const NewArrivals = () => {
   };
 
   return (
-    <div className="product_area">
+    <div className="product_area" data-aos="fade-up">
       <div className="container">
         <h4 className="title text-center">New Arrivals</h4>
       </div>

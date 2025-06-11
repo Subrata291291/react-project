@@ -47,9 +47,9 @@ const SingleBlog = () => {
       <CommonBanner />
       <div className="single_blog_area pt-90 pb-65">
         <div className="container">
-          <div className="row gx-5">
+          <div className="row gx-md-5">
             {/* Left Main Content */}
-            <div className="col-md-7">
+            <div className="col-12 col-md-7">
               <div className="single_blog_area_left">
                 {contentToRender.map((item) => (
                   <div key={item.id} className="mb-5">
@@ -62,11 +62,11 @@ const SingleBlog = () => {
             </div>
 
             {/* Right Sidebar */}
-            <div className="col-md-5">
+            <div className="col-12 col-md-5">
               <div className="single_blog_area_right">
                 {/* Categories */}
-                <div className="blog_category_sidebar mb-4">
-                  <h3 className="mb-4">Blog Categories</h3>
+                <div className="blog_category_sidebar">
+                  <h3>Blog Categories</h3>
                   {allCategories.map((cat, index) => (
                     <span
                       key={index}
@@ -83,8 +83,8 @@ const SingleBlog = () => {
                 <div className="recent_post">
                   <h3>Recent Posts</h3>
                   {recentPosts.map(r => (
-                    <div key={r.id} className="recent_post_box d-flex mb-3">
-                      <div className="post_img me-3">
+                    <div key={r.id} className="recent_post_box d-md-flex mb-md-3">
+                      <div className="post_img me-md-3">
                         <Link to={`/blog/${r.id}`}>
                           <img src={r.img} alt={r.title} className="img-fluid" />
                         </Link>
