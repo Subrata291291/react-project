@@ -8,13 +8,16 @@ import Cart from './pages/Cart';
 import Contact from './pages/Contact';
 import Checkout from './pages/Checkout';
 import Header from './components/Header';
+import Footer from './components/Footer';
+import ThankYou from "./pages/ThankYou";
+import { CartProvider } from "./components/AddToCart";
+import useGlobalScripts from '../src/assets/js/useGlobalScripts';
+
 import '../src/assets/css/header.css';
 import '../src/assets/css/style.css';
-import AOS from "aos";
 import "aos/dist/aos.css";
-import 'font-awesome/css/font-awesome.min.css';
-import Footer from './components/Footer';
-import useGlobalScripts from '../src/assets/js/useGlobalScripts';
+import AOS from "aos";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
   useGlobalScripts();
@@ -25,9 +28,11 @@ function App() {
       once: true,
     });
   }, []);
+
   return (
-    <BrowserRouter>
-      <Header />
+    <CartProvider>
+      <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
@@ -36,10 +41,11 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/thankyou" element={<ThankYou />} />
         </Routes>
-      <Footer/>
-    </BrowserRouter>
-    
+        <Footer />
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 

@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "title": "Wireless Headphones",
+    "description": "High quality wireless headphones",
+    "price": 99.99,
+    "category": "Headphones",
+    "img": "../src/assets/images/pro-1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Gaming Headset",
+    "description": "Immersive surround sound headset",
+    "price": 79.99,
+    "category": "Headphones",
+    "img": "../src/assets/images/pro-2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Bluetooth Speaker",
+    "description": "Portable Bluetooth speaker",
+    "price": 45.00,
+    "category": "Electronics",
+    "img": "../src/assets/images/pro-3.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Smart Watch",
+    "description": "Track fitness and receive notifications",
+    "price": 129.99,
+    "category": "Gadgets",
+    "img": "../src/assets/images/pro-4.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Classic Hat",
+    "description": "Fashionable classic hat",
+    "price": 19.99,
+    "category": "Fashion",
+    "img": "../src/assets/images/pro-5.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Washing Machine",
+    "description": "Efficient home appliance",
+    "price": 350.00,
+    "category": "Home Appliances",
+    "img": "../src/assets/images/pro-6.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Security Camera",
+    "description": "Home security surveillance camera",
+    "price": 89.99,
+    "category": "Cameras",
+    "img": "../src/assets/images/pro-1.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Professional DSLR",
+    "description": "High-resolution DSLR camera",
+    "price": 499.99,
+    "category": "Cameras",
+    "img": "../src/assets/images/pro-2.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Electric Kettle",
+    "description": "Quick boil electric kettle",
+    "price": 29.99,
+    "category": "Home Appliances",
+    "img": "../src/assets/images/pro-3.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Fitness Band",
+    "description": "Track your fitness goals",
+    "price": 59.99,
+    "category": "Gadgets",
+    "img": "../src/assets/images/pro-4.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Cotton Shirt",
+    "description": "Lightweight breathable shirt",
+    "price": 24.99,
+    "category": "Fashion",
+    "img": "../src/assets/images/pro-5.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Over-Ear Headphones",
+    "description": "Comfortable headphones with great bass",
+    "price": 89.99,
+    "category": "Headphones",
+    "img": "../src/assets/images/pro-6.jpg"
+  },
+  {
+    "id": 13,
+    "title": "Tripod Stand",
+    "description": "Stable support for cameras",
+    "price": 34.99,
+    "category": "Cameras",
+    "img": "../src/assets/images/pro-1.jpg"
+  },
+  {
+    "id": 14,
+    "title": "Electric Blender",
+    "description": "Blend fruits, vegetables, and more",
+    "price": 69.99,
+    "category": "Home Appliances",
+    "img": "../src/assets/images/pro-2.jpg"
+  },
+  {
+    "id": 15,
+    "title": "Leather Wallet",
+    "description": "Genuine leather stylish wallet",
+    "price": 39.99,
+    "category": "Fashion",
+    "img": "../src/assets/images/pro-3.jpg"
+  },
+  {
+    "id": 16,
+    "title": "VR Headset",
+    "description": "Experience virtual reality gaming",
+    "price": 199.99,
+    "category": "Gadgets",
+    "img": "../src/assets/images/pro-5.jpg"
+  },
+  {
+    "id": 17,
+    "title": "Portable Power Bank",
+    "description": "10000mAh fast charging power bank",
+    "price": 29.99,
+    "category": "Electronics",
+    "img": "../src/assets/images/pro-4.jpg"
+  },
+  {
+    "id": 18,
+    "title": "Neckband Earphones",
+    "description": "Lightweight neckband with clear audio",
+    "price": 49.99,
+    "category": "Headphones",
+    "img": "../src/assets/images/pro-1.jpg"
+  },
+  {
+    "id": 19,
+    "title": "Hair Dryer",
+    "description": "Quick-dry technology for smooth hair",
+    "price": 54.99,
+    "category": "Home Appliances",
+    "img": "../src/assets/images/pro-2.jpg"
+  },
+  {
+    "id": 20,
+    "title": "Smart Glasses",
+    "description": "Augmented reality wearable tech",
+    "price": 149.99,
+    "category": "Gadgets",
+    "img": "../src/assets/images/pro-3.jpg"
+  }
+]

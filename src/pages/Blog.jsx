@@ -77,7 +77,7 @@ const Blog = () => {
               {Array.from({ length: totalPages }, (_, index) => (
                 <button
                   key={index}
-                  className={`btn mx-1 ${currentPage === index + 1 ? 'btn-dark' : 'btn-outline-dark'}`}
+                  className={`btn mx-1 ${currentPage === index + 1 ? 'btn-light' : 'btn-outline-dark'}`}
                   onClick={() => handlePageChange(index + 1)}
                 >
                   {index + 1}
