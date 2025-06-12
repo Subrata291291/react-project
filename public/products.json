@@ -2,161 +2,161 @@
   {
     "id": 1,
     "title": "Wireless Headphones",
-    "description": "High quality wireless headphones",
+    "description": "High-quality wireless headphones with clear audio.",
     "price": 99.99,
-    "category": "Headphones",
+    "category": "Wireless",
     "img": "../src/assets/images/pro-1.jpg"
   },
   {
     "id": 2,
     "title": "Gaming Headset",
-    "description": "Immersive surround sound headset",
+    "description": "Immersive surround sound gaming headset with mic.",
     "price": 79.99,
-    "category": "Headphones",
+    "category": "Gaming",
     "img": "../src/assets/images/pro-2.jpg"
   },
   {
     "id": 3,
-    "title": "Bluetooth Speaker",
-    "description": "Portable Bluetooth speaker",
-    "price": 45.00,
-    "category": "Electronics",
+    "title": "Over-Ear Headphones",
+    "description": "Comfortable design with powerful bass performance.",
+    "price": 89.99,
+    "category": "Bluetooth",
     "img": "../src/assets/images/pro-3.jpg"
   },
   {
     "id": 4,
-    "title": "Smart Watch",
-    "description": "Track fitness and receive notifications",
-    "price": 129.99,
-    "category": "Gadgets",
+    "title": "Bluetooth Headphones",
+    "description": "Tangle-free listening with Bluetooth connectivity.",
+    "price": 59.99,
+    "category": "Bluetooth",
     "img": "../src/assets/images/pro-4.jpg"
   },
   {
     "id": 5,
-    "title": "Classic Hat",
-    "description": "Fashionable classic hat",
-    "price": 19.99,
-    "category": "Fashion",
+    "title": "Noise Cancelling Headphones",
+    "description": "Block out distractions with active noise canceling.",
+    "price": 129.99,
+    "category": "Noise Cancelling",
     "img": "../src/assets/images/pro-5.jpg"
   },
   {
     "id": 6,
-    "title": "Washing Machine",
-    "description": "Efficient home appliance",
-    "price": 350.00,
-    "category": "Home Appliances",
+    "title": "Studio Monitor Headphones",
+    "description": "Precision audio for music professionals.",
+    "price": 149.99,
+    "category": "Studio",
     "img": "../src/assets/images/pro-6.jpg"
   },
   {
     "id": 7,
-    "title": "Security Camera",
-    "description": "Home security surveillance camera",
-    "price": 89.99,
-    "category": "Cameras",
+    "title": "Kids Safe Headphones",
+    "description": "Volume-limited headphones safe for children.",
+    "price": 39.99,
+    "category": "Kids",
     "img": "../src/assets/images/pro-1.jpg"
   },
   {
     "id": 8,
-    "title": "Professional DSLR",
-    "description": "High-resolution DSLR camera",
-    "price": 499.99,
-    "category": "Cameras",
+    "title": "Sports Headphones",
+    "description": "Sweat-resistant headphones for active use.",
+    "price": 49.99,
+    "category": "Sports",
     "img": "../src/assets/images/pro-2.jpg"
   },
   {
     "id": 9,
-    "title": "Electric Kettle",
-    "description": "Quick boil electric kettle",
+    "title": "Wired Headphones",
+    "description": "Reliable wired headphones with 3.5mm jack.",
     "price": 29.99,
-    "category": "Home Appliances",
+    "category": "DJ",
     "img": "../src/assets/images/pro-3.jpg"
   },
   {
     "id": 10,
-    "title": "Fitness Band",
-    "description": "Track your fitness goals",
-    "price": 59.99,
-    "category": "Gadgets",
+    "title": "Foldable Headphones",
+    "description": "Compact and foldable for easy portability.",
+    "price": 64.99,
+    "category": "Foldable",
     "img": "../src/assets/images/pro-4.jpg"
   },
   {
     "id": 11,
-    "title": "Cotton Shirt",
-    "description": "Lightweight breathable shirt",
-    "price": 24.99,
-    "category": "Fashion",
+    "title": "DJ Headphones",
+    "description": "Rotating ear cups and heavy bass for DJs.",
+    "price": 99.99,
+    "category": "DJ",
     "img": "../src/assets/images/pro-5.jpg"
   },
   {
     "id": 12,
-    "title": "Over-Ear Headphones",
-    "description": "Comfortable headphones with great bass",
-    "price": 89.99,
-    "category": "Headphones",
+    "title": "Budget Headphones",
+    "description": "Affordable headphones with decent sound.",
+    "price": 19.99,
+    "category": "DJ",
     "img": "../src/assets/images/pro-6.jpg"
   },
   {
     "id": 13,
-    "title": "Tripod Stand",
-    "description": "Stable support for cameras",
-    "price": 34.99,
-    "category": "Cameras",
+    "title": "ANC Headphones",
+    "description": "Wireless headphones with active noise cancellation.",
+    "price": 119.99,
+    "category": "Luxury",
     "img": "../src/assets/images/pro-1.jpg"
   },
   {
     "id": 14,
-    "title": "Electric Blender",
-    "description": "Blend fruits, vegetables, and more",
-    "price": 69.99,
-    "category": "Home Appliances",
+    "title": "Hi-Fi Headphones",
+    "description": "True-to-life sound with hi-fi capability.",
+    "price": 149.99,
+    "category": "Luxury",
     "img": "../src/assets/images/pro-2.jpg"
   },
   {
     "id": 15,
-    "title": "Leather Wallet",
-    "description": "Genuine leather stylish wallet",
-    "price": 39.99,
-    "category": "Fashion",
+    "title": "Neckband Headphones",
+    "description": "Neckband design with all-day comfort.",
+    "price": 74.99,
+    "category": "Luxury",
     "img": "../src/assets/images/pro-3.jpg"
   },
   {
     "id": 16,
-    "title": "VR Headset",
-    "description": "Experience virtual reality gaming",
+    "title": "Leather Headphones",
+    "description": "Premium headphones with leather padding.",
     "price": 199.99,
-    "category": "Gadgets",
-    "img": "../src/assets/images/pro-5.jpg"
-  },
-  {
-    "id": 17,
-    "title": "Portable Power Bank",
-    "description": "10000mAh fast charging power bank",
-    "price": 29.99,
-    "category": "Electronics",
+    "category": "Luxury",
     "img": "../src/assets/images/pro-4.jpg"
   },
   {
+    "id": 17,
+    "title": "Reference Headphones",
+    "description": "Uncolored sound for mixing and mastering.",
+    "price": 179.99,
+    "category": "Reference",
+    "img": "../src/assets/images/pro-5.jpg"
+  },
+  {
     "id": 18,
-    "title": "Neckband Earphones",
-    "description": "Lightweight neckband with clear audio",
-    "price": 49.99,
-    "category": "Headphones",
-    "img": "../src/assets/images/pro-1.jpg"
+    "title": "RGB Gaming Headset",
+    "description": "Gaming headset with RGB and surround sound.",
+    "price": 89.99,
+    "category": "Reference",
+    "img": "../src/assets/images/pro-6.jpg"
   },
   {
     "id": 19,
-    "title": "Hair Dryer",
-    "description": "Quick-dry technology for smooth hair",
-    "price": 54.99,
-    "category": "Home Appliances",
-    "img": "../src/assets/images/pro-2.jpg"
+    "title": "Compact Headphones",
+    "description": "Great for travel with folding mechanism.",
+    "price": 34.99,
+    "category": "Reference",
+    "img": "../src/assets/images/pro-1.jpg"
   },
   {
     "id": 20,
-    "title": "Smart Glasses",
-    "description": "Augmented reality wearable tech",
-    "price": 149.99,
-    "category": "Gadgets",
-    "img": "../src/assets/images/pro-3.jpg"
+    "title": "True Wireless Earbuds",
+    "description": "In-ear earbuds with charging case and mic.",
+    "price": 99.99,
+    "category": "Luxury",
+    "img": "../src/assets/images/pro-2.jpg"
   }
 ]

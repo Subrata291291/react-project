@@ -12,7 +12,8 @@ const CommonBanner = () => {
     'blog': 'Blog',
     'contact': 'Contact',
     'checkout': 'Checkout',
-    'cart': 'Cart'
+    'cart': 'Cart',
+    'thankyou': 'Thank you'
   };
 
   // Generate dynamic title

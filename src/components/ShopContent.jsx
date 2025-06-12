@@ -77,7 +77,7 @@ const ShopContent = () => {
     <div>
       <section className="products-area pt-90 pb-65 shadow" data-aos="fade-up">
         <div className="container">
-          <div className="row">
+          <div className="row gx-md-5">
             {/* Sidebar */}
             <div className="col-12 col-md-4">
               <div className="products-left">
@@ -131,7 +131,7 @@ const ShopContent = () => {
                         </div>
                         <div className="cart-details position-absolute">
                           <ul>
-                            <li><a href="#"><i className="fa-regular fa-heart"></i></a></li>
+                            {/* {<li><a href="#"><i className="fa-regular fa-heart"></i></a></li>} */}
                             <li>
                               <button className="add-cart btn p-0 border-0 bg-transparent" onClick={() => addToCart(product)}>
                                 <i className="fa-solid fa-bag-shopping"></i>

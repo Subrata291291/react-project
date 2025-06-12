@@ -1,8 +1,16 @@
 import React from 'react';
 import beatpic from '../assets/images/beat-pic.png';
 import beatGirl from '../assets/images/beat1-pic.png';
+import { useNavigate } from 'react-router-dom';
 
 export default function BeatSection() {
+
+    const navigate = useNavigate();
+  
+    const handleOrderNow = () => {
+      navigate('/shop');
+    };
+
   return (
     <section className="beat_area">
       <div className="container">
@@ -17,7 +25,7 @@ export default function BeatSection() {
                 praesent elementum facilisis leo vel. Volutpat diam ut venenatis tellus in
                 metus.
               </p>
-              <button className="button btn order-btn1">Order Now</button>
+              <button className="button btn order-btn1" onClick={handleOrderNow}>Order Now</button>
             </div>
           </div>
           <div className="col-lg-6 col-md-6 col-12 order-lg-2 order-md-2 order-1">
@@ -45,7 +53,7 @@ export default function BeatSection() {
                 praesent elementum facilisis leo vel. Volutpat diam ut venenatis tellus in
                 metus.
               </p>
-              <button className="button btn order-btn1">Order Now</button>
+              <button className="button btn order-btn1" onClick={handleOrderNow}>Order Now</button>
             </div>
           </div>
         </div>

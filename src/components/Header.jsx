@@ -38,16 +38,16 @@ export default function Header() {
               <li className="nav-item">
                 <Link className="nav-link" to="/shop">Shop</Link>
               </li>
-              <li className="nav-item contact_page">
+              <li className="nav-item">
                 <Link className="nav-link" to="/blog">Blog</Link>
               </li>
-              <li className="nav-item contact_page">
+              <li className="nav-item">
                 <Link className="nav-link" to="/cart">Cart</Link>
               </li>
-              <li className="nav-item contact_page">
+              <li className="nav-item">
                 <Link className="nav-link" to="/checkout">Checkout</Link>
               </li>
-              <li className="nav-item contact_page">
+              <li className="nav-item">
                 <Link className="nav-link" to="/contact">Contact</Link>
               </li>
             </ul>

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Slider from 'react-slick';
+import { CartContext } from '../components/AddToCart';
 
 import pro1 from '../assets/images/pro-1.png';
 import pro2 from '../assets/images/pro-2.png';
@@ -9,22 +10,24 @@ import pro5 from '../assets/images/pro-5.png';
 import pro6 from '../assets/images/pro-6.png';
 
 const leftOffers = [
-  { id: 1, title: 'Noise Isolated', image: pro1, price: '900.00' },
-  { id: 2, title: 'Lightweight Headphones', image: pro5, price: '500.00' },
-  { id: 3, title: 'Kids Headphones', image: pro3, price: '560.00' },
-  { id: 4, title: 'Commando Headset', image: pro4, price: '670.00' },
+  { id: 1, title: 'Noise Isolated', image: pro1, price: 900.00 },
+  { id: 2, title: 'Lightweight Headphones', image: pro5, price: 500.00 },
+  { id: 3, title: 'Kids Headphones', image: pro3, price: 560.00 },
+  { id: 4, title: 'Commando Headset', image: pro4, price: 670.00 },
 ];
 
 const rightOffers = [
-  { id: 1, title: 'Noise Isolated', image: pro1, price: '670.00' },
-  { id: 2, title: 'Lightweight Headphones', image: pro2, price: '500.00'},
-  { id: 3, title: 'Leather Headset', image: pro3, price: '499.00' },
-  { id: 4, title: 'Kids Headphones', image: pro4, price: '799.00' },
-  { id: 5, title: 'Noise Isolated', image: pro5, price: '1299.00' },
-  { id: 6, title: 'Noise Isolated', image: pro6, price: '999.00' },
+  { id: 1, title: 'Noise Isolated', image: pro1, price: 670.00 },
+  { id: 2, title: 'Lightweight Headphones', image: pro2, price: 500.00 },
+  { id: 3, title: 'Leather Headset', image: pro3, price: 499.00 },
+  { id: 4, title: 'Kids Headphones', image: pro4, price: 799.00 },
+  { id: 5, title: 'Noise Isolated', image: pro5, price: 1299.00 },
+  { id: 6, title: 'Noise Isolated', image: pro6, price: 999.00 },
 ];
 
 const SpecialOffers = () => {
+  const { addToCart } = useContext(CartContext);
+
   const sliderSettings = {
     dots: false,
     infinite: true,
@@ -51,7 +54,7 @@ const SpecialOffers = () => {
                     </li>
                     <li className="off_content text-truncate">
                       <a href="#" className="text-truncate">{item.title}</a>
-                      <p className="pro-price">{item.price}</p>
+                      <p className="pro-price">${item.price.toFixed(2)}</p>
                       <div className="rating-box">
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star" aria-hidden="true"></i>
@@ -59,6 +62,18 @@ const SpecialOffers = () => {
                         <i className="fa fa-star" aria-hidden="true"></i>
                         <i className="fa fa-star-o" aria-hidden="true"></i>
                       </div>
+                    </li>
+                  </ul>
+                  <ul className="cart-details position-absolute">
+                    <li><a href="#"><i className="fa fa-heart-o" aria-hidden="true"></i></a></li>
+                    <li>
+                      <button
+                        onClick={() => addToCart({ ...item, description: "Special offer product" })}
+                        className="bg-transparent border-0 add-cart btn"
+                        title="Add to Cart"
+                      >
+                        <i className="fa fa-shopping-basket" />
+                      </button>
                     </li>
                   </ul>
                 </div>
@@ -78,16 +93,24 @@ const SpecialOffers = () => {
                           <div className="pro-pic position-relative">
                             <img src={item.image} alt={item.title} className="product-pic" />
                             <ul className="d-flex justify-content-center align-items-center">
-                              <li><a href="#"><i className="fa fa-heart-o" aria-hidden="true"></i></a></li>
-                              <li><a href="#"><i className="fa fa-shopping-basket" /></a></li>
+                              {/* <li><a href="#"><i className="fa fa-heart-o" aria-hidden="true"></i></a></li> */}
+                              <li>
+                                <button
+                                  onClick={() => addToCart({ ...item, description: "Special slider product" })}
+                                  className="bg-transparent border-0 add-cart btn"
+                                  title="Add to Cart"
+                                >
+                                  <i className="fa fa-shopping-basket" />
+                                </button>
+                              </li>
                             </ul>
                           </div>
                           <div className="pro-details">
                             <h4 className="product-title text-truncate">{item.title}</h4>
                             <p className="pro-descrip text-truncate">
-                              Diam donec adipiscing tristique risus. Praesent tristique magna sit amet purus gravida quis blandit. In dictum non consectetur a erat nam at lectus.
+                              Diam donec adipiscing tristique risus. Praesent tristique magna sit amet purus gravida.
                             </p>
-                            <p className="pro-price">{item.price}</p>
+                            <p className="pro-price">${item.price.toFixed(2)}</p>
                           </div>
                         </div>
                       </div>

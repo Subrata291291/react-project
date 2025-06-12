@@ -6,8 +6,14 @@ import NewArrivals from '../components/NewArrivals';
 import BeatSection from '../components/BeatSection';
 import SpecialOffers from '../components/SpecialOffers';
 import IntroducingVideo from '../components/IntroducingVideo';
-export default function Home() {
+import { useNavigate } from 'react-router-dom';
 
+export default function Home() {
+  const navigate = useNavigate();
+
+  const handleOrderNow = () => {
+    navigate('/shop');
+  };
 
   const bannerSliderSettings = {
     dots: true,
@@ -49,7 +55,7 @@ export default function Home() {
             <div className="banner_box" data-aos="fade-right">
               <h3>feel the music in your bones</h3>
               <h4>Music loud <br />Fulfill your music needs</h4>
-              <button className="button btn order-btn">Order Now</button>
+              <button className="button btn order-btn" onClick={handleOrderNow}>Order Now</button>
             </div>
           </div>
         </div>
@@ -59,7 +65,7 @@ export default function Home() {
             <div className="banner_box" data-aos="fade-right">
               <h3>Exhale worries with headphones</h3>
               <h4>Deserve best <br />Interpret your music differently</h4>
-              <button className="button btn order-btn">Order Now</button>
+              <button className="button btn order-btn" onClick={handleOrderNow}>Order Now</button>
             </div>
           </div>
         </div>
@@ -69,7 +75,7 @@ export default function Home() {
             <div className="banner_box" data-aos="fade-left">
               <h3>stylish wireless on ear-headphones</h3>
               <h4>Fine quality <br />Wireless headphones to stay inspired</h4>
-              <button className="button btn order-btn">Order Now</button>
+              <button className="button btn order-btn" onClick={handleOrderNow}>Order Now</button>
             </div>
           </div>
         </div>
