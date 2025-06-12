@@ -13,7 +13,7 @@ const ThankYouContent = () => {
   const { orderNumber, date, total, paymentMethod, products, billing } = state;
 
   return (
-    <section className="thank-you-area shadow">
+    <section className="thank-you-area">
       <div className="container">
         <div className="order-message">
           <p className="thank-you-txt">Thank you, {billing.name}. Your order has been received.</p>
@@ -65,6 +65,7 @@ const ThankYouContent = () => {
               <li><p><b>Address :</b> {billing.address}</p></li>
               <li><p><b>Address1 :</b> {billing.address1}</p></li>
               <li><p><b>State :</b> {billing.state}</p></li>
+              <li><p><b>Pin :</b> {billing.pin}</p></li>
               <li><p><b>Phone :</b> {billing.phone}</p></li>
               <li><p><b>Email :</b> {billing.email}</p></li>
             </ul>

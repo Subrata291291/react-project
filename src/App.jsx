@@ -12,12 +12,14 @@ import Footer from './components/Footer';
 import ThankYou from "./pages/ThankYou";
 import { CartProvider } from "./components/AddToCart";
 import useGlobalScripts from '../src/assets/js/useGlobalScripts';
+import IntroducingVideo from "./components/IntroducingVideo";
 
 import '../src/assets/css/header.css';
 import '../src/assets/css/style.css';
 import "aos/dist/aos.css";
 import AOS from "aos";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 function App() {
   useGlobalScripts();
@@ -43,6 +45,7 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/thankyou" element={<ThankYou />} />
         </Routes>
+        <IntroducingVideo/>
         <Footer />
       </BrowserRouter>
     </CartProvider>

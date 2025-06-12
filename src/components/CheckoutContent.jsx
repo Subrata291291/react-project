@@ -19,23 +19,39 @@ const CheckoutContent = () => {
     payment: 'Cash on delivery',
   });
 
+  const [coupon, setCoupon] = useState('');
+  const [discount, setDiscount] = useState(0);
+  const [couponMessage, setCouponMessage] = useState('');
   const [validated, setValidated] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const totalAmount = cartItems.reduce((sum, item) => sum + item.price * item.qty, 0);
+  const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.qty, 0);
+  const totalAmount = subtotal - discount;
+
+  const handleCouponApply = (e) => {
+    e.preventDefault();
+    const entered = coupon.trim().toUpperCase();
+    if (entered === 'FLAT50') {
+      setDiscount(50);
+      setCouponMessage('Coupon applied: ₹50 off');
+    } else {
+      setDiscount(0);
+      setCouponMessage('Invalid coupon code');
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
 
-    if (form.checkValidity() === false) {
+    if (!form.checkValidity()) {
       e.stopPropagation();
     } else {
       const orderDetails = {
-        orderNumber: Math.floor(1000 + Math.random() * 9000), // simple random order ID
+        orderNumber: Math.floor(1000 + Math.random() * 9000),
         date: new Date().toLocaleDateString(),
         total: `₹${totalAmount.toFixed(2)}`,
         paymentMethod: formData.payment,
@@ -46,11 +62,13 @@ const CheckoutContent = () => {
         })),
         billing: {
           name: `${formData.firstname} ${formData.lastname}`,
-          address: formData.address,
-          address1: `${formData.apartment} ${formData.pin}`,
-          state: formData.state,
+          email: formData.email,
           phone: formData.phone,
-          email: formData.email
+          address: formData.address,
+          apartment: formData.apartment,
+          city: formData.city,
+          state: formData.state,
+          pin: formData.pin
         }
       };
 
@@ -62,9 +80,10 @@ const CheckoutContent = () => {
 
   return (
     <div>
-      <section className="checkout-area shadow">
+      <section className="checkout-area">
         <div className="container">
           <div className="row gx-5">
+            {/* Checkout Form */}
             <div className="col-lg-8 order-2 order-md-2 order-lg-1">
               <div className="checkout-left" data-aos="fade-right">
                 <form
@@ -83,38 +102,30 @@ const CheckoutContent = () => {
                     <h3>Billing address</h3>
                     <div className="col-md-6 mb-4">
                       <input type="text" name="firstname" className="form-control" placeholder="First Name" required onChange={handleChange} />
-                      <div className="invalid-feedback">Enter first name.</div>
                     </div>
                     <div className="col-md-6 mb-4">
                       <input type="text" name="lastname" className="form-control" placeholder="Last Name" required onChange={handleChange} />
-                      <div className="invalid-feedback">Enter last name.</div>
                     </div>
                     <div className="col-md-12 mb-4">
                       <input type="text" name="address" className="form-control" placeholder="Address" required onChange={handleChange} />
-                      <div className="invalid-feedback">Enter address.</div>
                     </div>
                     <div className="col-md-12 mb-4">
                       <input type="text" name="apartment" className="form-control" placeholder="Apartment, suite, etc. (optional)" onChange={handleChange} />
                     </div>
                     <div className="col-md-6 mb-4">
                       <input type="text" name="city" className="form-control" placeholder="City" required onChange={handleChange} />
-                      <div className="invalid-feedback">Enter city.</div>
                     </div>
                     <div className="col-md-6 mb-4">
                       <select name="state" className="form-select" required onChange={handleChange}>
-                        <option disabled value="">State</option>
+                        <option value="">State</option>
                         <option value="West Bengal">West Bengal</option>
-                        {/* Add more states as needed */}
                       </select>
-                      <div className="invalid-feedback">Choose a state.</div>
                     </div>
                     <div className="col-md-6 mb-4">
                       <input type="tel" name="pin" className="form-control" placeholder="Pin Code" required onChange={handleChange} />
-                      <div className="invalid-feedback">Enter pin code.</div>
                     </div>
                     <div className="col-md-6 mb-4">
                       <input type="tel" name="phone" className="form-control" placeholder="Phone" required onChange={handleChange} />
-                      <div className="invalid-feedback">Enter phone number.</div>
                     </div>
                   </div>
 
@@ -143,10 +154,33 @@ const CheckoutContent = () => {
               </div>
             </div>
 
+            {/* Order Summary */}
             <div className="col-lg-4 order-1 order-md-1 order-lg-2">
               <div className="checkout-right" data-aos="fade-left">
                 <div className="order-summary">
                   <p className="oreder-summary-title">Order Summary</p>
+
+                  {/* Coupon Section */}
+                  <form onSubmit={handleCouponApply} className="row g-2 coupon-area">
+                    <div className="col-8">
+                      <input
+                        type="text"
+                        className="form-control"
+                        value={coupon}
+                        onChange={(e) => setCoupon(e.target.value)}
+                        placeholder="Enter coupon code"
+                      />
+                    </div>
+                    <div className="col-4">
+                      <button type="submit" className="coupon-btn btn-dark btn w-100">Apply</button>
+                    </div>
+                    {couponMessage && (
+                      <div className="col-12">
+                        <p className={`mt-2 ${discount ? 'text-success' : 'text-danger'}`}>{couponMessage}</p>
+                      </div>
+                    )}
+                  </form>
+
                   <ul>
                     {cartItems.map(item => (
                       <li key={item.id}>
@@ -167,25 +201,33 @@ const CheckoutContent = () => {
                               </li>
                             </ul>
                           </div>
-                          <div className="col-4">
-                            <div className="total-checkout-price" style={{ float: 'right' }}>
-                              <h3>₹{(item.price * item.qty).toFixed(2)}</h3>
-                            </div>
+                          <div className="col-4 text-end">
+                            <h3>₹{(item.price * item.qty).toFixed(2)}</h3>
                           </div>
                         </div>
                       </li>
                     ))}
 
-                    <li>
+                    <li className="mt-3">
                       <div className="row">
                         <div className="col-6"><p>Subtotal</p></div>
-                        <div className="col-6"><h3 style={{ float: 'right' }}>₹{totalAmount.toFixed(2)}</h3></div>
+                        <div className="col-6 text-end"><h3>₹{subtotal.toFixed(2)}</h3></div>
                       </div>
                     </li>
-                    <li>
+
+                    {discount > 0 && (
+                      <li className="mt-2">
+                        <div className="row">
+                          <div className="col-6"><p className="text-success">Discount</p></div>
+                          <div className="col-6 text-end"><h5 className="text-success">− ₹{discount.toFixed(2)}</h5></div>
+                        </div>
+                      </li>
+                    )}
+
+                    <li className="mt-2">
                       <div className="row">
                         <div className="col-6"><h2><b>Total</b></h2></div>
-                        <div className="col-6"><h3 style={{ float: 'right' }}>₹{totalAmount.toFixed(2)}</h3></div>
+                        <div className="col-6 text-end"><h3>₹{totalAmount.toFixed(2)}</h3></div>
                       </div>
                     </li>
                   </ul>

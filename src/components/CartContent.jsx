@@ -19,7 +19,7 @@ const CartContent = () => {
 
   return (
     <div>
-      <section className="cart-area shadow">
+      <section className="cart-area">
         <div className="container">
           <div className="row gx-5">
             <div className="col-md-8">

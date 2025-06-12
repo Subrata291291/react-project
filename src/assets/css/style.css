@@ -741,8 +741,48 @@ i::before {
 }
 
 /*Checkout page*/
+.checkout-right .accordion-button {
+  font-size: 1.4rem !important;
+  background-color: var(--ss-primary);
+  color: #fff;
+}
+.checkout-right .accordion-item {
+  margin-bottom: 2rem;
+  border: none;
+}
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+.accordion-button::after {
+  filter: invert(1);
+}
+.checkout-right .accordion-body {
+  padding: 0;
+}
+.checkout-right .accordion-body input {
+  padding: 1rem;
+  outline: none;
+  font-size: 1.4rem;
+}
+.checkout-right .submit-btn {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    border: none;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    background-color: var(--ss-primary);
+    font-weight: 500;
+}
+.checkout-right .accordion-body ul li {
+  padding: 0 !important;
+}
+.checkout-right .accordion-button:not(.collapsed) {
+  background-color: var(--ss-primary);
+  color: #fff;
+}
 .checkout-area {
-  padding: 7rem 0rem;
+  padding: 7rem 0rem 0rem;
   margin-bottom: 8rem;
 }
 .checkout-area .checkout-left .checkout-form input, .checkout-area .checkout-left .checkout-form select {
@@ -807,7 +847,7 @@ i::before {
 }
 .checkout-area .order-pic span {
   top: -1rem;
-  background-color: red;
+  background-color: var(--ss-primary);
   width: 2rem;
   height: 2rem;
   display: flex;
@@ -839,7 +879,30 @@ i::before {
   padding-bottom: 0;
 }
 .checkout-area .order-summary .oreder-summary-title {
+  margin-bottom: 2rem;
+}
+.coupon-area {
   margin-bottom: 3rem;
+}
+.coupon-area input {
+  outline: none;
+  padding: 1rem;
+  font-size: 1.4rem;
+}
+.checkout-right .text-success {
+  font-size: 1.4rem !important;
+}
+.checkout-right .text-danger {
+  font-size: 1.4rem !important;
+}
+
+.coupon-area .coupon-btn {
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+.form-control:focus {
+  border-color: #ddd !important;
+  box-shadow: none !important;
 }
 .checkout-area .order-summary p {
   font-size: 1.6rem;
@@ -904,7 +967,7 @@ i::before {
 }
 /*Cart page*/
 .cart-area {
-  padding: 7rem 0rem;
+  padding: 7rem 0rem 0rem;
   margin-bottom: 8rem;
 }
 .cart-area .product-details-left h4 {
