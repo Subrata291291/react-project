@@ -21,7 +21,7 @@ const CartContent = () => {
     <div>
       <section className="cart-area">
         <div className="container">
-          <div className="row gx-5">
+          <div className="row gx-md-5">
             <div className="col-md-8">
               <div className="product-details-left" data-aos="fade-right">
                 <div className="product-heading">

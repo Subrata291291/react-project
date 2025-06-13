@@ -51,7 +51,9 @@
 .mb-25 {
   margin-bottom: 25px;
 }
-
+.p-70 {
+  padding: 7rem 0rem;
+}
 .mt-40 {
   margin-top: 40px;
 }
@@ -112,6 +114,7 @@ i::before {
   font-size: 1.8rem;
   margin-top: 2rem;
 }
+
 
 /*Banner Area*/
 .banner_area .slider-1 {
@@ -922,10 +925,6 @@ i::before {
 }
 
 /*Thankyou Page*/
-.thank-you-area {
-  padding: 7rem 0rem;
-  margin-bottom: 8rem;
-}
 .thank-you-area .order-message .thank-you-txt {
   color: green;
 }
@@ -966,7 +965,7 @@ i::before {
   margin-bottom: 0;
 }
 .thank-you-area .table>tbody {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 /*Cart page*/
 .cart-area {
@@ -1068,7 +1067,137 @@ i::before {
   margin: 0rem 0rem 2rem;
 }
 
+/*Contact page*/
+.contact-area .contact-heading {
+  font-size: 3rem;
+  color: #000;
+  margin-bottom: 5rem;
+}
+
+.contact-text {
+  font-size: 2.2rem;
+  color: #000;
+}
+
+.contact-para {
+  font-size: 1.6rem;
+  margin: 1rem 0rem 2rem 0rem;
+}
+
+.contact-box li {
+  border: 1px solid var(--ss-secondary);
+  padding: 3rem;
+  text-align: center;
+  margin-right: 2rem;
+  width: 50rem;
+  border-radius: 0.5rem;
+}
+.contact-box h3 {
+  color: #000;
+  margin: 1rem 0rem;
+}
+.contact-box span {
+  font-size: 1.6rem;
+}
+.contact-box p i {
+  font-size: 3rem;
+  color: var(--ss-secondary);
+}
+
+.address-area {
+  margin-top: 4rem;
+  background-color: #fff;
+  padding: 3rem;
+}
+.address-area li:first-child {
+  margin-right: 2rem;
+}
+.address-area li h3 {
+  color: #000;
+  margin: 0rem 0rem 1rem;
+}
+.address-area li span {
+  font-size: 1.6rem;
+}
+.address-area li p {
+  margin-bottom: 2rem;
+}
+.address-area li p i {
+  color: var(--ss-secondary);
+}
+
+.contact-right {
+  padding: 4rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.contact-right .form-control {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0px;
+  font-size: 1.6rem;
+  padding-left: 0rem !important;
+  margin-top: 1rem;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 300;
+}
+.contact-right .form-floating > label {
+  color: var(--ss-secondary);
+  padding: 0.5em 0em;
+  font-size: 1.4rem;
+}
+.contact-right .form-floating > select {
+  color: var(--ss-secondary);
+  padding-top: inherit !important;
+}
+.contact-right .form-control:focus {
+  box-shadow: 0 0 0 0rem rgba(13, 110, 253, 0.25);
+  background-color: transparent;
+}
+.contact-right #floatingSelect {
+  font-size: 1.4rem !important;
+  color: var(--ss-secondary);
+  font-weight: 400;
+  padding: 1rem 0.75rem !important;
+}
+.contact-right .form-floating > .form-control, .contact-right .form-floating > .form-control-plaintext, .contact-right .form-floating > .form-select {
+  height: auto;
+}
+.contact-right input:-internal-autofill-selected {
+  background-color: transparent !important;
+}
+.contact-right .form-control:focus {
+  border-color: #ddd !important;
+  color: var(--ss-secondary);
+}
+.contact-right .submit_btn {
+  background-color: var(--ss-primary);
+  font-size: 1.6rem;
+  padding: 1rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  width: 100%;
+  border: none;
+  color: #fff;
+}
+.contact-right .submit_btn:hover {
+  color: #fff;
+  box-shadow: none;
+  outline: none;
+  background-color: var(--ss-secondary);
+}
+
+.contact-divider-pic {
+  max-width: 300px;
+  margin: 0 auto;
+  display: flex;
+  margin-bottom: 4rem;
+}
+
 /*Additional Css*/
+.form-select:focus {
+  box-shadow: none !important;
+}
 .Toastify__toast-theme--light {
   font-size: 1.4rem;
 }
@@ -1633,9 +1762,21 @@ thead.thead-dark tr th {
 }
 
 @media (max-width: 1199px) {
+  .title {
+    font-size: 3rem;
+  }
 }
 
 @media screen and (max-device-width: 991px) {
+  .checkout-area .checkout-left .checkout-form .payment-method {
+    margin-top: 1rem;
+  }
+  .checkout-area .order-summary {
+    margin-top: 4rem;
+  }
+  .checkout-area .checkout-left .submit-btn {
+    margin-top: 2rem;
+  }
   .beat_area {
     padding-bottom: 3rem;
   }
@@ -1707,6 +1848,31 @@ thead.thead-dark tr th {
 }
 
 @media (max-width: 767px) {
+  .checkout-area {
+    padding: 0rem 0rem 0rem;
+    margin-bottom: 2rem;
+  }
+  .checkout-left {
+    margin-top: 4rem;
+  }
+  .contact-information p {
+    font-size: 1.2rem;
+  }
+  .billing-address h3 {
+    margin-bottom: 1rem;
+  }
+  .checkout-area .checkout-left .checkout-form .billing-address {
+    margin-top: 2rem;
+  }
+  .contact-box li {
+    width: 100%;
+  }
+  .contact-right {
+    padding: 2rem;
+  }
+  .address-area {
+    padding: 0;
+  }
   .pb-65 {
     padding-bottom: 20px;
   }

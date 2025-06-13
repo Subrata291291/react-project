@@ -82,9 +82,9 @@ const CheckoutContent = () => {
     <div>
       <section className="checkout-area">
         <div className="container">
-          <div className="row gx-5">
+          <div className="row gx-md-5">
             {/* Checkout Form */}
-            <div className="col-lg-8 order-2 order-md-2 order-lg-1">
+            <div className="col-lg-8 order-2 order-md-1 order-lg-1">
               <div className="checkout-left" data-aos="fade-right">
                 <form
                   className={`checkout-form needs-validation ${validated ? 'was-validated' : ''}`}
