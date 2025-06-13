@@ -1547,10 +1547,19 @@ thead.thead-dark tr th {
 	  font-size: 1.8rem;
     color:#000;
 }
-	.post_img img {
+.post_img img {
     max-width: 11rem;
     margin-right: 1rem;
     border-radius: .8rem;
+}
+.single_blog_area_left {
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 5px #0000001a;
+}
+.single_blog_area_right {
+  position: sticky;
+  top: 0;
 }
 .blog_category_sidebar {
   padding: 2rem;
