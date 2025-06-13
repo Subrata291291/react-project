@@ -512,6 +512,7 @@ i::before {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 9;
 }
 
 #video-container {
@@ -878,7 +879,7 @@ i::before {
   padding: 0;
 }
 .checkout-area .order-summary ul li {
-  padding: 2rem 0rem;
+  padding: 1rem 0rem;
   border-bottom: 1px solid #ddd;
 }
 .checkout-area .order-summary ul li:first-child {
@@ -1873,6 +1874,15 @@ thead.thead-dark tr th {
 }
 
 @media (max-width: 767px) {
+  .products-right {
+    margin-top: 4rem;
+  }
+  .commone_banner h3 {
+    font-size: 25px;
+  }
+  .introducing_area h3 {
+    margin: 1rem 0rem;
+  }
   .checkout-area {
     padding: 0rem 0rem 0rem;
     margin-bottom: 2rem;
