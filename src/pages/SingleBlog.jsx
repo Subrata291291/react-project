@@ -12,7 +12,7 @@ const SingleBlog = () => {
   const [recentPosts, setRecentPosts] = useState([]);
 
   useEffect(() => {
-    fetch('/blogData.json')
+    fetch('../src/blogData.json')
       .then(res => res.json())
       .then(data => {
         const categories = data.categories.map(c => c.name);

@@ -8,7 +8,7 @@ const Blog = () => {
   const postsPerPage = 6;
 
   useEffect(() => {
-    fetch('/blogData.json')
+    fetch('../src/blogData.json')
       .then(res => res.json())
       .then(data => {
         const allPosts = data.categories.flatMap(category =>
