@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import CommonBanner from '../components/CommonBanner';
-import blogData from '../assets/blogData.json'; //Direct import from src/assets
+import blogData from '../assets/blogData'; //Direct import from src/assets
 
 const SingleBlog = () => {
   const { id } = useParams();
@@ -13,19 +13,18 @@ const SingleBlog = () => {
   const [recentPosts, setRecentPosts] = useState([]);
 
   useEffect(() => {
-    const data = blogData;
-    const categories = data.categories.map(c => c.name);
+    const categories = blogData.categories.map(c => c.name);
     setAllCategories(categories);
-
-    const all = data.categories.flatMap(category =>
+  
+    const all = blogData.categories.flatMap(category =>
       category.posts.map(post => ({ ...post, category: category.name }))
     );
     setAllPosts(all);
-
+  
     const selectedPost = all.find(p => p.id === parseInt(id));
     setPost(selectedPost);
     setActiveCategory('');
-
+  
     const recent = all.filter(p => p.id !== parseInt(id)).slice(0, 4);
     setRecentPosts(recent);
   }, [id]);

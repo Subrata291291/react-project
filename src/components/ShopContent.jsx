@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { CartContext } from '../components/AddToCart';
 import { toast } from 'react-toastify';
-import productsData from '../assets/products.json'; // Direct import
+import productsData from '../assets/products'; // Direct import
 
 const ShopContent = () => {
   const { addToCart } = useContext(CartContext);

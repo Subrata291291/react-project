@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import CommonBanner from '../components/CommonBanner';
-import blogData from '../assets/blogData.json'; // Direct import
+import blogData from '../assets/blogData'; // Direct import
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
