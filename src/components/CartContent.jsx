@@ -21,7 +21,7 @@ const CartContent = () => {
     <div>
       <section className="cart-area">
         <div className="container">
-          <div className="row gx-md-5">
+          <div className="row">
             <div className="col-md-8">
               <div className="product-details-left" data-aos="fade-right">
                 <div className="product-heading">
@@ -39,12 +39,12 @@ const CartContent = () => {
                         <div className="col-md-6">
                           <div className="product-price-details">
                             <div className="row">
-                              <div className="col-4">
+                              <div className="col-3">
                                 <div className="product-pic">
                                   <img src={product.img || product.image} alt={product.title} />
                                 </div>
                               </div>
-                              <div className="col-8">
+                              <div className="col-9">
                                 <h4 className="product-title">{product.title}</h4>
                                 <h5 className="product-price mt-3">${product.price.toFixed(2)}</h5>
                                 <div className="quantity-wrapper mt-4">
