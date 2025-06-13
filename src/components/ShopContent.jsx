@@ -1,9 +1,10 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { CartContext } from '../components/AddToCart';
 import { toast } from 'react-toastify';
+import productsData from '../assets/products.json'; // Direct import
 
 const ShopContent = () => {
-  const { addToCart } = useContext(CartContext); 
+  const { addToCart } = useContext(CartContext);
 
   const [allProducts, setAllProducts] = useState([]);
   const [products, setProducts] = useState([]);
@@ -13,13 +14,8 @@ const ShopContent = () => {
   const productsPerPage = 8;
 
   useEffect(() => {
-    fetch('../src/assets/products.json')
-      .then((res) => res.json())
-      .then((data) => {
-        setAllProducts(data);
-        setProducts(data);
-      })
-      .catch((error) => console.error('Error loading product data:', error));
+    setAllProducts(productsData);
+    setProducts(productsData);
   }, []);
 
   const categories = ['All', ...new Set(allProducts.map(p => p.category))];
@@ -36,7 +32,7 @@ const ShopContent = () => {
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
     setCurrentPage(1);
-    let filtered = category === 'All'
+    const filtered = category === 'All'
       ? [...allProducts]
       : allProducts.filter(product => product.category === category);
     setProducts(sortProducts(filtered, sortOption));
@@ -49,7 +45,6 @@ const ShopContent = () => {
     setProducts(sorted);
   };
 
-  // Pagination
   const totalPages = Math.ceil(products.length / productsPerPage);
   const startIndex = (currentPage - 1) * productsPerPage;
   const currentProducts = products.slice(startIndex, startIndex + productsPerPage);
@@ -132,19 +127,16 @@ const ShopContent = () => {
                         </div>
                         <div className="cart-details position-absolute">
                           <ul>
-                            {/* {<li><a href="#"><i className="fa-regular fa-heart"></i></a></li>} */}
                             <li>
-                              {/* {<button className="add-cart btn p-0 border-0 bg-transparent" onClick={() => addToCart(product)}>
-                                <i className="fa-solid fa-bag-shopping"></i>
-                              </button>} */}
-                              <button className="add-cart btn p-0 border-0 bg-transparent"
+                              <button
+                                className="add-cart btn p-0 border-0 bg-transparent"
                                 onClick={() => {
                                   addToCart(product);
-                                  toast.success(`${product.title} added to cart`, {
-                                  });
-                                }}>
-                                  <i className="fa-solid fa-bag-shopping"></i>
-                                </button>
+                                  toast.success(`${product.title} added to cart`);
+                                }}
+                              >
+                                <i className="fa-solid fa-bag-shopping"></i>
+                              </button>
                             </li>
                           </ul>
                         </div>
@@ -152,6 +144,7 @@ const ShopContent = () => {
                     </div>
                   ))}
                 </div>
+
                 {renderPagination()}
               </div>
             </div>

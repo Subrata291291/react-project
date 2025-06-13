@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import CommonBanner from '../components/CommonBanner';
+import blogData from '../assets/blogData.json'; // Direct import
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
@@ -8,17 +9,12 @@ const Blog = () => {
   const postsPerPage = 6;
 
   useEffect(() => {
-    fetch('../src/assets/blogData.json')
-      .then(res => res.json())
-      .then(data => {
-        const allPosts = data.categories.flatMap(category =>
-          category.posts.map(post => ({ ...post, category: category.name }))
-        );
-        setPosts(allPosts);
-      });
+    const allPosts = blogData.categories.flatMap(category =>
+      category.posts.map(post => ({ ...post, category: category.name }))
+    );
+    setPosts(allPosts);
   }, []);
 
-  // Pagination logic
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
