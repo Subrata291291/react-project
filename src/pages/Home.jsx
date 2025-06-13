@@ -98,35 +98,35 @@ export default function Home() {
                   <li>
                     <p>
                       <span>
-                        <i className="fa fa-dot-circle-o" aria-hidden="true"></i>
+                      <i class="fa-solid fa-circle-dot"></i>
                       </span> Solo Pro wireless headphones
                     </p>
                   </li>
                   <li>
                     <p>
                     <span>
-                      <i className="fa fa-dot-circle-o" aria-hidden="true"></i>
+                    <i class="fa-solid fa-circle-dot"></i>
                     </span> Carrying Case
                     </p>
                   </li>
                   <li>
                     <p>
                     <span>
-                      <i className="fa fa-dot-circle-o" aria-hidden="true"></i>
+                    <i class="fa-solid fa-circle-dot"></i>
                     </span> Lightning to USD-A charging cable
                     </p>
                   </li>
                   <li>
                     <p>
                     <span>
-                      <i className="fa fa-dot-circle-o" aria-hidden="true"></i>
+                    <i class="fa-solid fa-circle-dot"></i>
                     </span> Quick Start Guide
                     </p>
                   </li>
                   <li>
                     <p>
                     <span>
-                      <i className="fa fa-dot-circle-o" aria-hidden="true"></i>
+                    <i class="fa-solid fa-circle-dot"></i>
                     </span> Warranty Cart
                     </p>
                   </li>
