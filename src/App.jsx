@@ -14,12 +14,16 @@ import { CartProvider } from "./components/AddToCart";
 import useGlobalScripts from '../src/assets/js/useGlobalScripts';
 import IntroducingVideo from "./components/IntroducingVideo";
 
+// ✅ Toastify setup
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+// Styles
 import '../src/assets/css/header.css';
 import '../src/assets/css/style.css';
 import "aos/dist/aos.css";
 import AOS from "aos";
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
 
 function App() {
   useGlobalScripts();
@@ -35,6 +39,19 @@ function App() {
     <CartProvider>
       <BrowserRouter>
         <Header />
+        
+        <ToastContainer
+          position="top-right"
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
@@ -45,7 +62,8 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/thankyou" element={<ThankYou />} />
         </Routes>
-        <IntroducingVideo/>
+
+        <IntroducingVideo />
         <Footer />
       </BrowserRouter>
     </CartProvider>

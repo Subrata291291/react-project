@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { CartContext } from '../components/AddToCart';
+import { toast } from 'react-toastify';
 
 const ShopContent = () => {
   const { addToCart } = useContext(CartContext); 
@@ -75,7 +76,7 @@ const ShopContent = () => {
 
   return (
     <div>
-      <section className="products-area pt-90 pb-65 shadow" data-aos="fade-up">
+      <section className="products-area pt-90" data-aos="fade-up">
         <div className="container">
           <div className="row gx-md-5">
             {/* Sidebar */}
@@ -133,9 +134,17 @@ const ShopContent = () => {
                           <ul>
                             {/* {<li><a href="#"><i className="fa-regular fa-heart"></i></a></li>} */}
                             <li>
-                              <button className="add-cart btn p-0 border-0 bg-transparent" onClick={() => addToCart(product)}>
+                              {/* {<button className="add-cart btn p-0 border-0 bg-transparent" onClick={() => addToCart(product)}>
                                 <i className="fa-solid fa-bag-shopping"></i>
-                              </button>
+                              </button>} */}
+                              <button className="add-cart btn p-0 border-0 bg-transparent"
+                                onClick={() => {
+                                  addToCart(product);
+                                  toast.success(`${product.title} added to cart`, {
+                                  });
+                                }}>
+                                  <i className="fa-solid fa-bag-shopping"></i>
+                                </button>
                             </li>
                           </ul>
                         </div>
@@ -143,7 +152,6 @@ const ShopContent = () => {
                     </div>
                   ))}
                 </div>
-
                 {renderPagination()}
               </div>
             </div>

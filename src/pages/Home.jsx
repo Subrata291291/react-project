@@ -5,8 +5,8 @@ import FeaturingArea from '../components/FeaturingArea';
 import NewArrivals from '../components/NewArrivals';
 import BeatSection from '../components/BeatSection';
 import SpecialOffers from '../components/SpecialOffers';
-import IntroducingVideo from '../components/IntroducingVideo';
 import { useNavigate } from 'react-router-dom';
+
 
 export default function Home() {
   const navigate = useNavigate();

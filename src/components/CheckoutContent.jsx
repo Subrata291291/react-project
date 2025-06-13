@@ -142,11 +142,12 @@ const CheckoutContent = () => {
                         onChange={handleChange}
                       />
                       <label className="form-check-label">Cash on delivery</label>
+                      <p class="cash-content">Pay with cash on delivery</p>
                     </div>
                   </div>
 
                   <div className="col-12">
-                    <button className="submit-btn w-100" type="submit">
+                    <button className="submit-btn" type="submit">
                       Pay Now
                     </button>
                   </div>

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import Slider from 'react-slick';
 import { CartContext } from '../components/AddToCart';
+import { toast } from 'react-toastify';
 
 import pro1 from '../assets/images/pro-1.png';
 import pro2 from '../assets/images/pro-2.png';
@@ -104,13 +105,14 @@ const NewArrivals = () => {
                   <ul className="d-flex justify-content-center align-items-center">
                     <li><button className="bg-transparent border-0"><i className="fa fa-heart-o" /></button></li>
                     <li>
-                      <button
-                        onClick={() => addToCart(product)}
-                        className="bg-transparent border-0 add-cart btn"
-                        title="Add to Cart"
-                      >
-                        <i className="fa fa-shopping-basket" />
-                      </button>
+                      <button className="add-cart btn p-0 border-0 bg-transparent"
+                        onClick={() => {
+                          addToCart(product);
+                          toast.success(`${product.title} added to cart`, {
+                        });
+                      }}>
+                        <i className="fa-solid fa-bag-shopping"></i>
+                    </button>
                     </li>
                   </ul>
                 </div>

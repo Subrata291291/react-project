@@ -17,7 +17,7 @@ export const CartProvider = ({ children }) => {
     localStorage.setItem('cart', JSON.stringify(cartItems));
   }, [cartItems]);
 
-  // ✅ Add item to cart
+  // Add item to cart
   const addToCart = (product) => {
     setCartItems(prevItems => {
       const existingItem = prevItems.find(item => item.id === product.id);
@@ -31,17 +31,17 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  // ✅ Remove item from cart
+  // Remove item from cart
   const removeFromCart = (productId) => {
     setCartItems(prevItems => prevItems.filter(item => item.id !== productId));
   };
 
-  // ✅ Clear entire cart
+  // Clear entire cart
   const clearCart = () => {
     setCartItems([]);
   };
 
-  // ✅ Update item quantity
+  // Update item quantity
   const updateQuantity = (productId, newQty) => {
     if (newQty < 1) return;
     setCartItems(prevItems =>
@@ -58,7 +58,7 @@ export const CartProvider = ({ children }) => {
         addToCart,
         removeFromCart,
         clearCart,
-        updateQuantity, // ✅ Expose updateQuantity
+        updateQuantity,
       }}
     >
       {children}

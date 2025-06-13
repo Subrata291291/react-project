@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import Slider from 'react-slick';
 import { CartContext } from '../components/AddToCart';
+import { toast } from 'react-toastify';
 
 import pro1 from '../assets/images/pro-1.png';
 import pro2 from '../assets/images/pro-2.png';
@@ -37,6 +38,15 @@ const SpecialOffers = () => {
     slidesToScroll: 1,
   };
 
+  const handleAddToCart = (item) => {
+    addToCart(item);
+    toast.success(`${item.title} added to cart`, {
+      position: 'top-right',
+      autoClose: 2000,
+      pauseOnHover: true,
+    });
+  };
+
   return (
     <section className="offer_area">
       <div className="container">
@@ -67,12 +77,9 @@ const SpecialOffers = () => {
                   <ul className="cart-details position-absolute">
                     <li><a href="#"><i className="fa fa-heart-o" aria-hidden="true"></i></a></li>
                     <li>
-                      <button
-                        onClick={() => addToCart({ ...item, description: "Special offer product" })}
-                        className="bg-transparent border-0 add-cart btn"
-                        title="Add to Cart"
-                      >
-                        <i className="fa fa-shopping-basket" />
+                      <button className="add-cart btn p-0 border-0 bg-transparent"
+                        onClick={() => handleAddToCart(item)}>
+                        <i className="fa-solid fa-bag-shopping"></i>
                       </button>
                     </li>
                   </ul>
@@ -93,14 +100,10 @@ const SpecialOffers = () => {
                           <div className="pro-pic position-relative">
                             <img src={item.image} alt={item.title} className="product-pic" />
                             <ul className="d-flex justify-content-center align-items-center">
-                              {/* <li><a href="#"><i className="fa fa-heart-o" aria-hidden="true"></i></a></li> */}
                               <li>
-                                <button
-                                  onClick={() => addToCart({ ...item, description: "Special slider product" })}
-                                  className="bg-transparent border-0 add-cart btn"
-                                  title="Add to Cart"
-                                >
-                                  <i className="fa fa-shopping-basket" />
+                                <button className="add-cart btn p-0 border-0 bg-transparent"
+                                  onClick={() => handleAddToCart(item)}>
+                                  <i className="fa-solid fa-bag-shopping"></i>
                                 </button>
                               </li>
                             </ul>
