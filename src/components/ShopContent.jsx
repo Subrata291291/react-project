@@ -13,7 +13,7 @@ const ShopContent = () => {
   const productsPerPage = 8;
 
   useEffect(() => {
-    fetch('../src/products.json')
+    fetch('../src/assets/products.json')
       .then((res) => res.json())
       .then((data) => {
         setAllProducts(data);
