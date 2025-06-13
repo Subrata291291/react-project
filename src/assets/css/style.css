@@ -1524,6 +1524,9 @@ thead.thead-dark tr th {
 }
 .blog_category_sidebar span {
   font-size: 1.4rem;
+  border-radius: 1.6rem;
+  background-color: #fbf7e8;
+  padding: 1rem 2rem;
 }
 .single_blog_area_right h3:before {
     height: 0.2rem;
@@ -1545,9 +1548,14 @@ thead.thead-dark tr th {
     color:#000;
 }
 	.post_img img {
-    max-width: 100px;
-    height: auto;
-    border: 1px solid var(--ss-primary);
+    max-width: 11rem;
+    margin-right: 1rem;
+    border-radius: .8rem;
+}
+.blog_category_sidebar {
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 2rem;
 }
 .single_blog_area_left h2 {
     font-size: 2rem;
