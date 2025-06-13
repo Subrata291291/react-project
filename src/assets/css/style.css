@@ -1874,6 +1874,26 @@ thead.thead-dark tr th {
 }
 
 @media (max-width: 767px) {
+  .blog_category_sidebar {
+    margin-top: 2rem;
+  }
+  .recent_post_box {
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+  }
+  .recent_post_box:last-child {
+    border: none;
+  }
+  .single_blog_area_left h2 {
+    font-size: 1.8rem;
+  }
+  .single_blog_area_left p {
+    font-size: 1.4rem;
+  }
+  .post_content h5 a {
+    font-size: 1.6rem;
+  }
   .products-right {
     margin-top: 4rem;
   }
