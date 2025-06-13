@@ -1880,6 +1880,9 @@ thead.thead-dark tr th {
   .blog_category_sidebar {
     margin-top: 2rem;
   }
+  .product-cart-total {
+    margin-top: 2rem;
+  }
   .recent_post_box {
     padding-bottom: 1rem;
     margin-bottom: 2rem;
