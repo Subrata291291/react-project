@@ -1794,6 +1794,9 @@ thead.thead-dark tr th {
 }
 
 @media screen and (max-device-width: 991px) {
+  .single_blog_area_right {
+    margin-top: 2rem;
+  }
   .checkout-area .checkout-left .checkout-form .payment-method {
     margin-top: 1rem;
   }

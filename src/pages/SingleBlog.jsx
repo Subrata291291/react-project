@@ -44,9 +44,9 @@ const SingleBlog = () => {
       <CommonBanner />
       <div className="single_blog_area pt-90 pb-65">
         <div className="container">
-          <div className="row gx-md-5">
+          <div className="row">
             {/* Left Main Content */}
-            <div className="col-12 col-md-7">
+            <div className="col-12 col-lg-7">
               <div className="single_blog_area_left">
                 {contentToRender.map((item) => (
                   <div key={item.id} className="mb-5">
@@ -59,7 +59,7 @@ const SingleBlog = () => {
             </div>
 
             {/* Right Sidebar */}
-            <div className="col-12 col-md-5">
+            <div className="col-12 col-lg-5">
               <div className="single_blog_area_right">
                 {/* Categories */}
                 <div className="blog_category_sidebar">
