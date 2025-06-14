@@ -1004,6 +1004,10 @@ i::before {
   margin-bottom: 2rem;
   font-weight: 600;
 }
+.product-cart-total {
+  position: sticky;
+  top: 0;
+}
 .cart-area .product-cart-total ul li {
   margin-bottom: 2rem;
 }
