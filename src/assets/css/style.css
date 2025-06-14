@@ -1257,6 +1257,9 @@ i::before {
 .form-select:focus {
   box-shadow: none !important;
 }
+.active>.page-link, .page-link.active {
+  border: none;
+}
 .Toastify__toast-theme--light {
   font-size: 1.4rem;
 }
@@ -1571,7 +1574,6 @@ thead.thead-dark tr th {
 }
 .page-link:focus {
   box-shadow: none !important;
-  background-color: transparent !important;
 }
 /*Single Blog Page*/
 .single_blog_area .active-category {
@@ -1827,6 +1829,22 @@ thead.thead-dark tr th {
   .footer_head form button {
     right: 11px;
     top: 11px;
+  }
+  .single-products-right h3 {
+    font-size: 3rem;
+  }
+  .single-products-right .price-box ul li {
+    font-size: 1.6rem;
+  }
+  .single-products-right .price-box p {
+    font-size: 1.8rem;
+  }
+  .add-cart-btn .btn-dark {
+    padding: 1.4rem 2rem;
+    font-size: 1.6rem;
+  }
+  .product-selection-box .product-categories {
+    font-size: 1.8rem;
   }
 }
 

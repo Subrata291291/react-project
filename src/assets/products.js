@@ -184,7 +184,7 @@ const products = [
     price: 99.99,
     category: "Luxury",
     img: pro2,
-    rating: 4.2
+    rating: 3.8
   }
 ];
 
