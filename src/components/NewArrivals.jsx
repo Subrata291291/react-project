@@ -30,7 +30,7 @@ const settings = {
     {
       breakpoint: 767,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1
       }
     }
