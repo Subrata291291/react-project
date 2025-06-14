@@ -16,7 +16,7 @@ import { CartProvider } from "./components/AddToCart";
 import useGlobalScripts from '../src/assets/js/useGlobalScripts';
 import IntroducingVideo from "./components/IntroducingVideo";
 
-// ✅ Toastify setup
+// Toastify setup
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 

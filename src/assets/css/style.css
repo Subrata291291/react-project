@@ -1253,6 +1253,7 @@ i::before {
 .product-selection-box .product-categories span {
   color: var(--ss-primary);
 }
+
 /*Additional Css*/
 .form-select:focus {
   box-shadow: none !important;
