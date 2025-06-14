@@ -72,6 +72,9 @@
 a {
   text-decoration: none !important;
 }
+a:hover {
+  color: var(--ss-secondary) !important;
+}
 ul {
   padding-left: 0px !important;
 }
