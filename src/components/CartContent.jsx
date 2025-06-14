@@ -79,7 +79,7 @@ const CartContent = () => {
             </div>
 
             <div className="col-md-4">
-              <div className="product-cart-total" data-aos="fade-left">
+              <div className="product-cart-total shadow p-4" data-aos="fade-left">
                 <h3 className="cart-total">CART TOTALS</h3>
                 <ul className="d-flex justify-content-between">
                   <li><h5>Subtotal</h5></li>
