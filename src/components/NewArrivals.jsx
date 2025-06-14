@@ -2,58 +2,7 @@ import React, { useContext } from 'react';
 import Slider from 'react-slick';
 import { CartContext } from '../components/AddToCart';
 import { toast } from 'react-toastify';
-
-import pro1 from '../assets/images/pro-1.png';
-import pro2 from '../assets/images/pro-2.png';
-import pro3 from '../assets/images/pro-3.png';
-import pro4 from '../assets/images/pro-4.png';
-import pro5 from '../assets/images/pro-5.png';
-import pro6 from '../assets/images/pro-6.png';
-
-const products = [
-  {
-    id: 1,
-    title: 'Noise Isolated',
-    description: 'Diam donec adipiscing tristique risus. Praesent tristique magna sit amet purus gravida.',
-    price: 899.00,
-    image: pro1
-  },
-  {
-    id: 2,
-    title: 'Lightweight Headphones',
-    description: 'Praesent tristique magna sit amet purus gravida quis blandit.',
-    price: 900.00,
-    image: pro2
-  },
-  {
-    id: 3,
-    title: 'Leather Headset',
-    description: 'In dictum non consectetur a erat nam at lectus.',
-    price: 599.00,
-    image: pro3
-  },
-  {
-    id: 4,
-    title: 'Kids Headphones',
-    description: 'Safe for young listeners with volume control.',
-    price: 799.00,
-    image: pro4
-  },
-  {
-    id: 5,
-    title: 'Studio Headphones',
-    description: 'Great for music production with noise isolation.',
-    price: 1299.00,
-    image: pro5
-  },
-  {
-    id: 6,
-    title: 'Bass Boost Headset',
-    description: 'Experience deeper bass and clearer sound.',
-    price: 1399.00,
-    image: pro6
-  }
-];
+import productsData from '../assets/products'; // Import your product data
 
 const settings = {
   dots: false,
@@ -97,22 +46,27 @@ const NewArrivals = () => {
       </div>
       <div className="product_slider container">
         <Slider {...settings}>
-          {products.map(product => (
+          {productsData.map(product => (
             <div key={product.id} className="slider container">
               <div className="product_box">
                 <div className="pro-pic position-relative">
-                  <img src={product.image} alt={product.title} className="product-pic" />
+                  <img src={product.img} alt={product.title} className="product-pic" />
                   <ul className="d-flex justify-content-center align-items-center">
-                    <li><button className="bg-transparent border-0"><i className="fa fa-heart-o" /></button></li>
                     <li>
-                      <button className="add-cart btn p-0 border-0 bg-transparent"
+                      <button className="bg-transparent border-0">
+                        <i className="fa fa-heart-o" />
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        className="add-cart btn p-0 border-0 bg-transparent"
                         onClick={() => {
                           addToCart(product);
-                          toast.success(`${product.title} added to cart`, {
-                        });
-                      }}>
+                          toast.success(`${product.title} added to cart`);
+                        }}
+                      >
                         <i className="fa-solid fa-bag-shopping"></i>
-                    </button>
+                      </button>
                     </li>
                   </ul>
                 </div>
