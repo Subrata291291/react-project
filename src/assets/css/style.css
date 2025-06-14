@@ -2105,6 +2105,10 @@ thead.thead-dark tr th {
     text-align: center;
     border: 1px dotted #72336c;
     padding: 1rem 0rem;
+    display: none;
+  }
+  .offer_area {
+    padding: 4rem;
   }
   .introducing_area {
     padding: 4rem 0rem;
