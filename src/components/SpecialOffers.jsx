@@ -2,15 +2,15 @@ import React, { useContext } from 'react';
 import Slider from 'react-slick';
 import { CartContext } from '../components/AddToCart';
 import { toast } from 'react-toastify';
-import products from '../assets/products'; // <-- import your full product list
+import { Link } from 'react-router-dom';
+import products from '../assets/products';
 
 const SpecialOffers = () => {
   const { addToCart } = useContext(CartContext);
 
-  // Get first 6 products to display as special offers (or any logic you prefer)
-  const specialOffers = products.slice(0, 12); // first 12 items
-  const leftOffers = specialOffers.slice(0, 4); // 4 for left static list
-  const rightOffers = specialOffers.slice(4);  // 8 for slider
+  const specialOffers = products.slice(0, 12);
+  const leftOffers = specialOffers.slice(0, 4);
+  const rightOffers = specialOffers.slice(4);
 
   const sliderSettings = {
     dots: false,
@@ -63,10 +63,14 @@ const SpecialOffers = () => {
                 <div className="offer_box" key={item.id}>
                   <ul className="d-flex align-items-center">
                     <li className="off-pro">
-                      <img src={item.img} alt={item.title} />
+                      <Link to={`/product/${item.id}`}>
+                        <img src={item.img} alt={item.title} />
+                      </Link>
                     </li>
                     <li className="off_content text-truncate">
-                      <a href="#" className="text-truncate">{item.title}</a>
+                      <Link to={`/product/${item.id}`} className="text-truncate text-decoration-none">
+                        {item.title}
+                      </Link>
                       <p className="pro-price">${item.price.toFixed(2)}</p>
                       <div className="rating-box">
                         <i className="fa fa-star"></i>
@@ -101,7 +105,9 @@ const SpecialOffers = () => {
                       <div className="container">
                         <div className="product_box">
                           <div className="pro-pic position-relative">
-                            <img src={item.img} alt={item.title} className="product-pic" />
+                            <Link to={`/product/${item.id}`}>
+                              <img src={item.img} alt={item.title} className="product-pic" />
+                            </Link>
                             <ul className="d-flex justify-content-center align-items-center">
                               <li>
                                 <button className="add-cart btn p-0 border-0 bg-transparent"
@@ -112,7 +118,11 @@ const SpecialOffers = () => {
                             </ul>
                           </div>
                           <div className="pro-details">
-                            <h4 className="product-title text-truncate">{item.title}</h4>
+                            <h4 className="product-title text-truncate">
+                              <Link to={`/product/${item.id}`} className="text-decoration-none">
+                                {item.title}
+                              </Link>
+                            </h4>
                             <p className="pro-descrip text-truncate">
                               {item.description}
                             </p>

@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { CartContext } from '../components/AddToCart';
 import { toast } from 'react-toastify';
-import productsData from '../assets/products'; // Direct import
+import productsData from '../assets/products';
 
 const ShopContent = () => {
   const { addToCart } = useContext(CartContext);
@@ -117,16 +118,17 @@ const ShopContent = () => {
                 <div className="row" id="custom-products">
                   {currentProducts.map((product) => (
                     <div className="col-6 col-md-4 col-lg-3" key={product.id}>
-                      <div className="product-box text-center position-relative">
+                      <div className="position-relative">
+                        <div className="product-box text-center text-decoration-none text-dark">
                         <div className="product-pic">
-                          <img src={product.img} alt={product.title} className="product-image" />
-                        </div>
-                        <div className="product-content">
-                          <div className="product-title text-truncate">{product.title}</div>
-                          <div className="product-price">${product.price.toFixed(2)}</div>
-                        </div>
-                        <div className="cart-details position-absolute">
-                          <ul>
+                            <img src={product.img} alt={product.title} className="product-image w-100" />
+                          </div>
+                          <div className="product-content">
+                            <div className="product-title text-truncate">{product.title}</div>
+                            <div className="product-price">${product.price.toFixed(2)}</div>
+                          </div>
+                          <div className="cart-details position-absolute">
+                          <ul className="gap-2">
                             <li>
                               <button
                                 className="add-cart btn p-0 border-0 bg-transparent"
@@ -138,7 +140,13 @@ const ShopContent = () => {
                                 <i className="fa-solid fa-bag-shopping"></i>
                               </button>
                             </li>
+                            <li>
+                              <Link to={`/product/${product.id}`} className="add-cart btn p-0 border-0 bg-transparent">
+                                <i className="fa-solid fa-eye"></i>
+                              </Link>
+                            </li>
                           </ul>
+                        </div>
                         </div>
                       </div>
                     </div>

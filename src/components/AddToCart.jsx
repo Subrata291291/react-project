@@ -12,21 +12,21 @@ export const CartProvider = ({ children }) => {
     setCartItems(storedCart);
   }, []);
 
-  // Save to localStorage when cartItems changes
+  // Save to localStorage when cartItems change
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cartItems));
   }, [cartItems]);
 
-  // Add item to cart
-  const addToCart = (product) => {
+  // ✅ Add item to cart with quantity support
+  const addToCart = (product, qty = 1) => {
     setCartItems(prevItems => {
       const existingItem = prevItems.find(item => item.id === product.id);
       if (existingItem) {
         return prevItems.map(item =>
-          item.id === product.id ? { ...item, qty: item.qty + 1 } : item
+          item.id === product.id ? { ...item, qty: item.qty + qty } : item
         );
       } else {
-        return [...prevItems, { ...product, qty: 1 }];
+        return [...prevItems, { ...product, qty }];
       }
     });
   };

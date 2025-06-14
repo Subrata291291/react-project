@@ -13,6 +13,7 @@ const CommonBanner = () => {
     'contact': 'Contact',
     'checkout': 'Checkout',
     'cart': 'Cart',
+    'product': 'Product',
     'thankyou': 'Thank you'
   };
 
