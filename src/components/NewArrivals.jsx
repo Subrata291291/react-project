@@ -56,7 +56,7 @@ const NewArrivals = () => {
                     src={product.img}
                     alt={product.title}
                     className="product-pic w-100"
-                    style={{ height: '250px', objectFit: 'cover' }}
+                    style={{}}
                   />
                   <ul className="d-flex justify-content-center align-items-center position-absolute">
                     <li className="mx-2">
