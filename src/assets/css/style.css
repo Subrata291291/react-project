@@ -869,7 +869,7 @@ i::before {
   background-color: var(--ss-secondary);
 }
 .checkout-area .order-pic span {
-  top: -1rem;
+  top: 0rem;
   background-color: var(--ss-primary);
   width: 2rem;
   height: 2rem;
