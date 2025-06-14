@@ -106,7 +106,7 @@ const SingleProduct = () => {
             {/* Product Details */}
             <div className="col-md-7">
               <div className="single-products-right">
-                <h3>{product.title}</h3>
+                <h3 className='mb-3'>{product.title}</h3>
                 <div className="price-box">
                   <ul className="">
                     <li className="star-pic mt-2 d-flex align-items-center">
