@@ -18,7 +18,7 @@ const ContactContent = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch('https://script.google.com/macros/s/AKfycbxBr4EqCkeLQOuwNi86kaEwAfsuysq9nIe8aIS39Y5u_eiPKhhG3R14e9N3pN2b-91O/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbwHjAenEOp22lXJ1bs4yvP0zSgSnpyRB9sPg1DB4g4/dev', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
