@@ -24,7 +24,7 @@ const ContactContent = () => {
     form.append('email', formData.email);
     form.append('message', formData.message);
   
-    fetch('https://script.google.com/macros/s/AKfycbyo0fB4vgxvnSLugmGMJB_AfTHr1TmDYXiYcFU_EIe2d6yLie_O89j3RLTUVwbOOHXl/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbxzP92QsVsQSdX7AQlHGA6DjVt5vsfNiW11_HrxaoMqZ8p6wdL2CPZ3FI0WT0HyZ3U3/exec', {
       method: 'POST',
       body: form
     })
