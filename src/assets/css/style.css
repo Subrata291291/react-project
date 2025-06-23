@@ -96,13 +96,13 @@ i::before {
   font-size: 5rem;
   color: var(--ss-secondary);
   font-family: var(--ss-montserrat);
-  -webkit-mask-image: linear-gradient(
+  mask-image: linear-gradient(
     -75deg,
     rgba(0, 0, 0, 0.6) 30%,
     #ee88c7 50%,
     rgba(0, 0, 0, 0.6) 70%
   );
-  -webkit-mask-size: 150%;
+  mask-size: 150%;
   animation: shines 2s infinite;
 }
 .title1 {
