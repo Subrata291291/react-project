@@ -159,7 +159,7 @@ const ContactContent = () => {
                     style={{ height: '100px' }}
                     required
                   ></textarea>
-                  <label htmlFor="message">Comments</label>
+                  <label htmlFor="message" className='message'>Comments</label>
                 </div>
                 <div className="form-floating">
                   <button type="submit" className="submit_btn button w-100">
