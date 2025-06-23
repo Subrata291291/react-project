@@ -1157,7 +1157,7 @@ i::before {
   padding-left: 0rem !important;
   margin-top: 1rem;
   background-color: transparent;
-  color: #fff;
+  color: #000;
   font-weight: 300;
 }
 .contact-right .form-floating > label {
