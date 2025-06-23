@@ -3,7 +3,7 @@ import { CartContext } from '../components/AddToCart';
 import { useNavigate } from 'react-router-dom';
 
 const CheckoutContent = () => {
-  const { cartItems } = useContext(CartContext);
+  const { cartItems, clearCart } = useContext(CartContext); // 👈 include clearCart
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -72,6 +72,7 @@ const CheckoutContent = () => {
         }
       };
 
+      clearCart(); // ✅ clear cart before redirect
       navigate('/thankyou', { state: orderDetails });
     }
 
@@ -83,7 +84,6 @@ const CheckoutContent = () => {
       <section className="checkout-area">
         <div className="container">
           <div className="row gx-md-5">
-            {/* Checkout Form */}
             <div className="col-lg-8 order-2 order-md-1 order-lg-1">
               <div className="checkout-left" data-aos="fade-right">
                 <form
@@ -142,7 +142,7 @@ const CheckoutContent = () => {
                         onChange={handleChange}
                       />
                       <label className="form-check-label">Cash on delivery</label>
-                      <p class="cash-content">Pay with cash on delivery</p>
+                      <p className="cash-content">Pay with cash on delivery</p>
                     </div>
                   </div>
 
