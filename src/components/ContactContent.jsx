@@ -17,15 +17,18 @@ const ContactContent = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    fetch('https://script.google.com/macros/s/AKfycbxojnVPHq40vMRllmh9x_XZ77BX50uhXp1Bf6o92uDz27Qt-V9dnOZf6qdLgSoKHA1p/exec', {
+  
+    const form = new FormData();
+    form.append('name', formData.name);
+    form.append('phone', formData.phone);
+    form.append('email', formData.email);
+    form.append('message', formData.message);
+  
+    fetch('https://script.google.com/macros/s/AKfycbyMSjpUuMv6rnICDzrRKSVYS-EHOtTtQ34ifL_0SRh5FZ2yF9ynSE80pxelO41sYLYA/exec', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData)
+      body: form
     })
-      .then((res) => res.json())
+      .then((res) => res.text()) // Apps Script returns plain text
       .then((response) => {
         alert('Message sent successfully!');
         setFormData({
