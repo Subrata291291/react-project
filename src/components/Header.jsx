@@ -41,12 +41,12 @@ export default function Header() {
               <li className="nav-item">
                 <Link className="nav-link" to="/blog">Blog</Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" to="/cart">Cart</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/checkout">Checkout</Link>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <Link className="nav-link" to="/contact">Contact</Link>
               </li>
@@ -55,11 +55,11 @@ export default function Header() {
 
           <ul className="right_menu">
             <li className="position-relative">
-              <div className="serach_box">
+              {/* <div className="serach_box">
                 <Link to="/contact">
                   <i className="fa fa-search" aria-hidden="true"></i>
                 </Link>
-              </div>
+              </div> */}
               <div className="cart_area position-relative">
                 <Link to="/cart">
                   <i className="fa fa-shopping-basket"></i>

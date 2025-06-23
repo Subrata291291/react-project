@@ -169,7 +169,7 @@ const CheckoutContent = () => {
                         className="form-control"
                         value={coupon}
                         onChange={(e) => setCoupon(e.target.value)}
-                        placeholder="Enter coupon code"
+                        placeholder="Enter coupon code (FLAT50)"
                       />
                     </div>
                     <div className="col-4">
