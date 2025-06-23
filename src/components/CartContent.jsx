@@ -39,11 +39,11 @@ const CartContent = () => {
 
                 <div className="product-details-box">
                   {cartItems.length === 0 ? (
-                    <div className="text-center mt-4">
+                    <div className="text-left mt-4">
                       <p style={{ fontSize: '1.4rem' }}>Your cart is empty.</p>
                       <Link
                         to="/shop"
-                        className="btn btn-primary mt-3"
+                        className="btn btn-dark mt-3"
                         style={{ fontSize: '1.4rem', padding: '1rem 2rem' }}
                       >
                         Shop Now
