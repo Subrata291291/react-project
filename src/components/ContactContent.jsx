@@ -1,6 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const ContactContent = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    fetch('https://script.google.com/macros/s/AKfycbxBr4EqCkeLQOuwNi86kaEwAfsuysq9nIe8aIS39Y5u_eiPKhhG3R14e9N3pN2b-91O/exec', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData)
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        alert('Message sent successfully!');
+        setFormData({
+          name: '',
+          phone: '',
+          email: '',
+          message: ''
+        });
+      })
+      .catch((err) => {
+        alert('There was an error submitting the form.');
+        console.error(err);
+      });
+  };
+
   return (
     <section className="contact-area p-70">
       <div className="container">
@@ -69,31 +109,64 @@ const ContactContent = () => {
               data-aos-duration="1000"
             >
               <h3 className="contact-heading text-center">Get In Touch</h3>
-              <form method="post">
+              <form onSubmit={handleSubmit}>
                 <div className="form-floating mb-3">
-                  <input type="text" className="form-control" id="floatingName" placeholder="" required />
-                  <label htmlFor="floatingName">Full Name</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder=""
+                    required
+                  />
+                  <label htmlFor="name">Full Name</label>
                 </div>
                 <div className="form-floating mb-3">
-                  <input type="tel" className="form-control" id="floatingPhone" placeholder="" required />
-                  <label htmlFor="floatingPhone">Phone Number</label>
+                  <input
+                    type="tel"
+                    className="form-control"
+                    id="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder=""
+                    required
+                  />
+                  <label htmlFor="phone">Phone Number</label>
                 </div>
                 <div className="form-floating mb-3">
-                  <input type="email" className="form-control" id="floatingEmail" placeholder="" required />
-                  <label htmlFor="floatingEmail">Email address</label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder=""
+                    required
+                  />
+                  <label htmlFor="email">Email address</label>
                 </div>
                 <div className="form-floating mb-3">
-                  <textarea className="form-control" placeholder="" id="floatingTextarea" rows="6" style={{ height: '100px' }} required></textarea>
-                  <label htmlFor="floatingTextarea">Comments</label>
+                  <textarea
+                    className="form-control"
+                    id="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows="6"
+                    style={{ height: '100px' }}
+                    required
+                  ></textarea>
+                  <label htmlFor="message">Comments</label>
                 </div>
                 <div className="form-floating">
-                  <button type="submit" value="submit" className="submit_btn button w-100">
+                  <button type="submit" className="submit_btn button w-100">
                     Submit
                   </button>
                 </div>
               </form>
             </div>
           </div>
+
         </div>
       </div>
     </section>
