@@ -120,9 +120,17 @@ const ShopContent = () => {
                     <div className="col-6 col-md-4 col-lg-3" key={product.id}>
                       <div className="position-relative">
                         <div className="product-box text-center text-decoration-none text-dark">
-                        <div className="product-pic">
+                          <div className="product-pic">
                             <img src={product.img} alt={product.title} className="product-image w-100" />
                           </div>
+                          <div className="product-rating">
+                              {Array.from({ length: 5 }).map((_, i) => (
+                                <i
+                                  key={i}
+                                  className={`fa-star ${product.rating >= i + 1 ? 'fas' : product.rating >= i + 0.5 ? 'fas fa-star-half-alt' : 'far'} text-warning me-1`}
+                                />
+                              ))}
+                            </div>
                           <div className="product-content">
                             <div className="product-title text-truncate">{product.title}</div>
                             <div className="product-price">${product.price.toFixed(2)}</div>
