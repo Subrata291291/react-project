@@ -1087,12 +1087,20 @@ i::before {
 }
 
 /*Contact page*/
+.thank-you-modal .modal-body {
+  padding: 0rem 2rem 4rem;
+}
+.thank-you-modal .modal-body h3 {
+  font-size: 1.6rem;
+}
+.thank-you-modal .modal-header {
+  border: none;
+}
 .contact-area .contact-heading {
   font-size: 3rem;
   color: #000;
   margin-bottom: 5rem;
 }
-
 .contact-text {
   font-size: 2.2rem;
   color: #000;
@@ -1204,7 +1212,6 @@ i::before {
   color: #fff;
 }
 .contact-right .submit_btn:hover {
-  color: #fff;
   box-shadow: none;
   outline: none;
   background-color: var(--ss-secondary);

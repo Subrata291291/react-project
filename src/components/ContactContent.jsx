@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import checkmark from '../assets/images/checkmark.gif'
 
 const ContactContent = () => {
   const [formData, setFormData] = useState({
@@ -30,13 +31,16 @@ const ContactContent = () => {
     })
       .then((res) => res.text()) // Apps Script returns plain text
       .then((response) => {
-        alert('Message sent successfully!');
         setFormData({
           name: '',
           phone: '',
           email: '',
           message: ''
         });
+        if (window.bootstrap && document.getElementById('thankYouModal')) {
+          const thankYouModal = new window.bootstrap.Modal(document.getElementById('thankYouModal'));
+          thankYouModal.show();
+        }
       })
       .catch((err) => {
         alert('There was an error submitting the form.');
@@ -45,6 +49,7 @@ const ContactContent = () => {
   };
 
   return (
+    <>
     <section className="contact-area p-70">
       <div className="container">
         <div className="row gx-lg-5">
@@ -173,6 +178,32 @@ const ContactContent = () => {
         </div>
       </div>
     </section>
+    {/* ✅ Bootstrap 5 Modal */}
+    <div
+        className="thank-you-modal modal fade"
+        id="thankYouModal"
+        tabIndex="-1"
+        aria-labelledby="thankYouModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content text-center">
+            <div className="modal-header">
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">
+              <img src={checkmark} alt="" />
+              <h3 className='mt-4'>Thanks for contacting us. We will get back to you shortly.</h3>
+            </div>
+          </div>
+        </div>
+    </div>
+    </>
   );
 };
 
