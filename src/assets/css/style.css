@@ -1194,9 +1194,6 @@ i::before {
 .contact-right .form-floating > .form-control, .contact-right .form-floating > .form-control-plaintext, .contact-right .form-floating > .form-select {
   height: auto;
 }
-.contact-right input:-internal-autofill-selected {
-  background-color: transparent !important;
-}
 .contact-right .form-control:focus {
   border-color: #ddd !important;
   color: var(--ss-secondary);
@@ -1216,7 +1213,9 @@ i::before {
   outline: none;
   background-color: var(--ss-secondary);
 }
-
+.contact-right .spinner-border  {
+  font-size: 2rem;
+}
 .contact-divider-pic {
   max-width: 300px;
   margin: 0 auto;
