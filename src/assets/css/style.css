@@ -1215,6 +1215,7 @@ i::before {
 }
 .contact-right .spinner-border  {
   font-size: 2rem;
+  vertical-align: middle;
 }
 .contact-divider-pic {
   max-width: 300px;
